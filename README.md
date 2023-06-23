@@ -37,7 +37,7 @@
   - DB 회원 저장소
 
 
- <br>
+<br>
 
 ## 주문, 할인 도메인 설계
 ### 주문, 할인 정책
@@ -54,4 +54,13 @@
 - 역할과 책임으로 나누는 이유: 추후에 책임을 담당하는 구형체가 바뀔 가능성에 대비해 역할/책임으로 나누고, 책임 객체만 바꿔 끼울 수 있게 하기 위함
 - 역할들의 협력 관계는 그대로 유지가 됨
 
- 
+<br>
+
+## Tips!
+- HashMap 대신에 ConcurrnetHashMap을 쓰자
+  - ConcurrentHashMap은 동시성을 지원하는 HashMap 클래스
+  - HashMap는 내부적으로 동기화되지 않고 스레드로부터 안전하지 않음
+  - ConcurrentHashMap은 내부적으로 동기화되어 스레드로부터 안전 (추가 및 삭제와 같은 수정 작업만)
+- psvm
+  - Public Static Void main(String[] arg);
+    
