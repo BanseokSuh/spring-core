@@ -63,4 +63,15 @@
   - ConcurrentHashMap은 내부적으로 동기화되어 스레드로부터 안전 (추가 및 삭제와 같은 수정 작업만)
 - psvm
   - Public Static Void main(String[] arg);
+
+<br>
     
+## 관심사의 분리
+= 애플리케이션은 추상간의 협력?
+- 
+
+
+
+
+<br>
+
