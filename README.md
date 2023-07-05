@@ -111,3 +111,19 @@
 - AppConfig와 같이 객체를 생성 및 관리를 해주며 의존관계를 설정해주는 객체
 
 <br>
+
+### 스프링 컨테이너
+- new AnnotationConfigApplicationContext(AppConfig.class);를 통해 만들어진 인스턴스를 스프링 컨테이너라 함
+- AppConfig.class를 파라미터로 받아서 AppConfig 클래스에서 @Bean 어노테이션이 붙은 설정 정보를 스프링 빈 저장소에 등록
+- 빈 이름은 중복되어서는 안 됨
+- 빈이 등록이 되면, 의존관계를 설정해줌
+
+<br>
+
+### 스프링 빈
+
+<br>
+<br>
+<br>
+<br>
+<br>
