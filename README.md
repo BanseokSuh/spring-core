@@ -122,7 +122,10 @@
 
 ### 컨테이너에 등록된 빈
 - AppConfig도 빈으로 등록됨
-- 
+- getRole() == ROLE_APPLICATION : 사용자가 정의한 빈
+- getRole() == ROLE_INFRASTRUCTURE : 스프링 내부에서 사용하는 빈
+
+<br>
 
 <br>
 <br>
