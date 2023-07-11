@@ -150,7 +150,6 @@ BeanFactory (interface)
   - 스프링 컨테이너의 최상위 인터페이스
   - 스프링 빈을 관리하고 조회하는 기능을 갖고 있음
   - getBean() 메서드 등
-  - 
 
 - ApplicationContext
   - BeanFactory의 기능을 모두 상속받아서 제공
@@ -163,5 +162,8 @@ BeanFactory (interface)
 - BeanFactory나 ApplicationContext를 스프링 컨테이너라고 하고, 우리는 ApplicationContext만 사용한다고 해도 무방함
 
 <br>
+
+[//]: # (commit test)
+
 <br>
 <br>
