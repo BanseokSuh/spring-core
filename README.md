@@ -163,7 +163,9 @@ BeanFactory (interface)
 
 <br>
 
-[//]: # (commit test 2)
+### 설정 정보
+- xml을 사용하면 컴파일 없이 빈 설정 정보를 변경할 수 있음
+- 
 
 <br>
 <br>
