@@ -141,9 +141,9 @@
 <br>
 
 ### BeanFactory와 ApplicationContext
-BeanFactory (interface)
-ㄴ(상속) ApplicationContext (interface) : BeanFactory에 부가기능을 추가한 거라고 이해할 수 있음
-         ㄴ(상속) AnnotationConfigApplicationContext : 구현객체
+BeanFactory (interface)<br>
+ㄴ(상속) ApplicationContext (interface) : BeanFactory에 부가기능을 추가한 거라고 이해할 수 있음<br>
+ㄴ(상속) AnnotationConfigApplicationContext : 구현객체
 
 
 - BeanFactory
@@ -154,10 +154,10 @@ BeanFactory (interface)
 - ApplicationContext
   - BeanFactory의 기능을 모두 상속받아서 제공
   - 부가 기능
-    - MessageSource: 한국어 요청이면 한국어 데이터, 영어 요청이면 영어 데이터 출력
-    - EnvironmentCapable: 로컬, 개발, 운영 환경을 구분해서 처리
-    - ApplicationEventPublisher: 이벤트를 발생하고 구독하는 모델을 편리하게 지원
-    - ResourceLoader: 파일, 클래스패스, 외부 등에서 리소스를 편리하게 조회
+    - MessageSource(메시지소스): 한국어 요청이면 한국어 데이터, 영어 요청이면 영어 데이터 출력
+    - EnvironmentCapable(환경변수): 로컬, 개발, 운영 환경을 구분해서 처리
+    - ApplicationEventPublisher(애플리케이션 이벤트): 이벤트를 발생하고 구독하는 모델을 편리하게 지원
+    - ResourceLoader(편리한 리소스): 파일, 클래스패스, 외부 등에서 리소스를 편리하게 조회
 
 - BeanFactory나 ApplicationContext를 스프링 컨테이너라고 하고, 우리는 ApplicationContext만 사용한다고 해도 무방함
 
