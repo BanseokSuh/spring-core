@@ -243,6 +243,10 @@ BeanFactory (interface)<br>
 
 - 그래서 Component 스캔을 쓰게 되면, @Autowired를 자연스럽게 사용하게 됨
 
+- ComponenetScan은 @Component가 붙은 모든 클래스를 스프링 빈으로 등록함
+- 이 때, 빈 이름은 클래스명을 사용하고, 제일 앞 알파벳은 소문자로 바꿈
+- 빈 이름 직접 지정 가능
+- @Autowired로 의존성 주입 시, 스프링 빈에서 조회하여 주입. 타입으로 조회
 
 
 <br>
