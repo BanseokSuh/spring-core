@@ -17,6 +17,13 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy; //구체적인 Impl을 의존하지 않음
 
+    //일반 메서드 주입은 일반적으로 잘 사용하지 않음
+//    @Autowired
+//    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
+
     //수정자 주입은 빈 등록 후 다음 단계에서 일어남
 //    @Autowired
 //    public void setDiscountPolicy(DiscountPolicy discountPolicy) {
