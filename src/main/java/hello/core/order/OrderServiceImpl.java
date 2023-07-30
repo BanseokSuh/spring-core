@@ -12,10 +12,13 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy; //구체적인 Impl을 의존하지 않음
 
-    @Autowired
+    @Autowired //생성자가 하나일 때는 자동으로 Autowired가 주입됨.
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        System.out.println("memberRepository = " + memberRepository);
+        System.out.println("discountPolicy = " + discountPolicy);
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
+
     }
 
     @Override
