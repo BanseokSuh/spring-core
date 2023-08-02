@@ -279,10 +279,20 @@ BeanFactory (interface)<br>
 - 아무 메서드에 @Autowired를 붙일 수 있음
 - 일반적으로 잘 사용하지 않음
 - 한 번에 여러 필드를 주입받을 수 있음
-- 
 
 ### 참고
 - @Autowired는 주입할 대상이 없으면 오류를 발생시킴
 - 스프링 빈이 아닌 클래스 안에서는 @Autowired를 적용해도 아무런 동작을 하지 않음
+
+<br>
+
+### 옵션 처리
+- 주입할 스프링 빈이 없어도 동작해야 할 때가 있음
+- @Autowired만 사용하면, 기본 설정 때문애 주입할 빈이 없을 시에 오류가 발생함
+- @Autowired(required=false) -> 자동 주입할 대상이 없으면, 수정자 메서드 자체가 호출이 안 됨
+- org.springframework.lang.@Nullable -> 자동 주입할 대상이 없으면, null이 등록됨
+- Optional<> -> 자동 주입할 대상이 없으면, Optional.empty가 등록됨
+
+<br>
 
 
