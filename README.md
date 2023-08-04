@@ -264,6 +264,7 @@ BeanFactory (interface)<br>
 - setter 메서드에 @Autowired를 붙여 사용
 - 선택적으로 설정할 수 있는 경우, 변경 가능한 의존관계에 사용
 - 자바빈 프로퍼티 규약에 따라, 필드에 접근할 때는 get필드명(), set필드명()으로 접근
+- ex) setName(); getName();
 
 ### 필드 주입
 - 선언한 필드 제일 앞에 @Autowired를 붙임
