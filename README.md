@@ -313,4 +313,17 @@ BeanFactory (interface)<br>
 
 - 컴파일 오류가 세상에서 가장 좋은 오류!
 
+<br>
+
+### Lombok
+- 라이브러리 인젝션을 추가해줌
+- 필수! Lombok 설치 후 preference에서 compiler > annotation processors에서 enable annotation processing을 켜줘야 함
+- @Getter(), @Setter(), @ToString
+- Getter는 많이 쓰임, Setter는 조심히
+- @RequiredArgumentConstructor() - 많이 사용됨
+- final이 붙은 필드를 파라미터로 받는 생성자를 만들어줌
+- 최근에는 생성자를 한 개 두고, @Autowired를 생략하는 방법을 많이 씀. 여기에 Lombok의 @NoArgumentConstructor를 함께 써서 기능은 다 사용하면서 코드늨 간결하게 쓸 수 있음
+
+
+
 
