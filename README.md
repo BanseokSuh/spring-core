@@ -325,5 +325,20 @@ BeanFactory (interface)<br>
 - 최근에는 생성자를 한 개 두고, @Autowired를 생략하는 방법을 많이 씀. 여기에 Lombok의 @NoArgumentConstructor를 함께 써서 기능은 다 사용하면서 코드늨 간결하게 쓸 수 있음
 
 
+### 여러개의 빈이 선택될 때
+- @Autowired에 필드명을 매칭
+  - 타입으로 매칭
+  - 타입 매칭의 결과가 2개 이상일 경우, 필드명 또는 파라미터 명으로 빈 이름 매칭
+
+- @Qualifier를 사용
+  - 추가 구분자
+  - @Qualifier는 @Qualifier를 찾는 데에만 쓰는 것에 안 헷갈림
+ 
+- @Primary - 자주 사용됨
+  - @Autowired 매칭 시에 여러번 매칭 되면 @Primary가 우선권을 가짐
+
+- @Qualifier가 @Primary보다 우선순위가 높음
+  
+
 
 
