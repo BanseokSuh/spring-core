@@ -338,7 +338,13 @@ BeanFactory (interface)<br>
   - @Autowired 매칭 시에 여러번 매칭 되면 @Primary가 우선권을 가짐
 
 - @Qualifier가 @Primary보다 우선순위가 높음
-  
+
+
+<br>
+
+### 어노테이션 직접 만들기
+- @Qualifier("mainDiscountPolicy")는 컴파일 시 타입 체크가 안 됨. 문자열이기 때문
+- @Interface MainDiscountPolicy 어노테이션을 직접 만들어 오타에 의한 에러를 컴파일 시점에 잡을 수 있음
 
 
 
