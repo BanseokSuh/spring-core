@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
     //필드 주입은 외부에서 필드 변경이 불가능해서 테스트하기 어려움.
@@ -21,11 +21,11 @@ public class OrderServiceImpl implements OrderService {
 
     //생성자 주입은 빈을 등록과 의존성 주입이 같이 일어남.
     //생성자가 하나일 때는 자동으로 Autowired가 주입됨.
-//    @Autowired
-//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-//        this.memberRepository = memberRepository;
-//        this.discountPolicy = discountPolicy;
-//    }
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     //일반 메서드 주입은 일반적으로 잘 사용하지 않음
 //    @Autowired
