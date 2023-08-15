@@ -5,6 +5,7 @@ import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -21,8 +22,10 @@ public class OrderServiceImpl implements OrderService {
 
     //생성자 주입은 빈을 등록과 의존성 주입이 같이 일어남.
     //생성자가 하나일 때는 자동으로 Autowired가 주입됨.
+    //기본적으로는 타입으로 매칭한다.
+    //타입의 매칭 결과가 2개 이상일 경우 필드명, 파라미터명으로 빈 이름 매칭한다.
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
