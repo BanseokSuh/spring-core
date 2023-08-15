@@ -17,6 +17,14 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy; //구체적인 Impl을 의존하지 않음
 
+    //생성자 주입은 빈을 등록과 의존성 주입이 같이 일어남.
+    //생성자가 하나일 때는 자동으로 Autowired가 주입됨.
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
+
     //일반 메서드 주입은 일반적으로 잘 사용하지 않음
 //    @Autowired
 //    public void init(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
@@ -35,15 +43,6 @@ public class OrderServiceImpl implements OrderService {
 //        System.out.println("memberRepository = " + memberRepository);
 //        this.memberRepository = memberRepository;
 //    }
-
-    //생성자 주입은 빈을 등록과 의존성 주입이 같이 일어남.
-    //생성자가 하나일 때는 자동으로 Autowired가 주입됨.
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-
-    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
