@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Scope;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.inject.Provider;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -50,7 +51,7 @@ public class SingletonWithPrototypeTest1 {
 //        private ObjectProvider<PrototypeBean> prototypeBeanProvider;
 
         @Autowired
-        private ObjectFactory<PrototypeBean> prototypeBeanProvider; // ObjectProvider는 ObjectFactory를 상속받고, 다른 편의 기능을 더 제공해줌
+        private Provider<PrototypeBean> prototypeBeanProvider; // ObjectProvider는 ObjectFactory를 상속받고, 다른 편의 기능을 더 제공해줌
 
 //        @Autowired
 //        ApplicationContext ac;
@@ -62,7 +63,8 @@ public class SingletonWithPrototypeTest1 {
 
         public int logic() {
 //            PrototypeBean prototypeBean = ac.getBean(PrototypeBean.class);
-            PrototypeBean prototypeBean = prototypeBeanProvider.getObject();
+//            PrototypeBean prototypeBean = prototypeBeanProvider.getObject();
+            PrototypeBean prototypeBean = prototypeBeanProvider.get();
             prototypeBean.addCount();
             return prototypeBean.getCount();
         }
