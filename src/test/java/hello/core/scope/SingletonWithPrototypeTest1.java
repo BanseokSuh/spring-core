@@ -2,6 +2,7 @@ package hello.core.scope;
 
 import hello.core.annotation.MainDiscountPolicy;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -45,8 +46,11 @@ public class SingletonWithPrototypeTest1 {
     static class ClientBean {
 //        private final PrototypeBean prototypeBean; // 생성 시점에 주입. x01
 
+//        @Autowired
+//        private ObjectProvider<PrototypeBean> prototypeBeanProvider;
+
         @Autowired
-        private ObjectProvider<PrototypeBean> prototypeBeanProvider;
+        private ObjectFactory<PrototypeBean> prototypeBeanProvider; // ObjectProvider는 ObjectFactory를 상속받고, 다른 편의 기능을 더 제공해줌
 
 //        @Autowired
 //        ApplicationContext ac;
