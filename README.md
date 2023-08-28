@@ -371,3 +371,12 @@ BeanFactory (interface)<br>
   - request: 웹 요청이 오고 나갈 때까지 유지되는 스코프.
   - session: 웹 세션이 시작되고 종료될 때까지 유지되는 스코프.
   - application: 웹의 서블릿 컨텍스트와 같은 범위로 유지되는 스코프.
+
+<br>
+
+## 웹 스코프
+- request: http 요청 하나가 들어오고 나갈 때까지 유지되는 스코프
+- session: http 세션과 동일한 생명주기를 갖는 스코프
+- application: 서블릿 컨텍스트와 동일한 생명주기를 갖는 스코프
+- websocket: 웹소켓과 동일한 생명주기를 갖는 스코프
+- 
